@@ -30,15 +30,15 @@ Tracks the food trucks around the user. Updated the current location of all food
 ### 1. User Stories (Required and Optional)
 
 Required Must-have Stories
-      User logs in to access app and preference settings
-      User picks some of their favorite food trucks. 
-      User will be assigned a role:  business owner, registered user, or guest.
-      Home page for different roles
-      Timeline page for registered users and guest
-      Settings (Accessibility, Notification, General, etc.)
+* User logs in to access app and preference settings
+* User picks some of their favorite food trucks. 
+* User will be assigned a role:  business owner, registered user, or guest.
+* Home page for different roles
+* Timeline page for registered users and guest
+* Settings (Accessibility, Notification, General, etc.)
 Optional Nice-to-have Stories
-      Check-in for the registered users at the food truck 
-      Page of most popular food trucks
-      Detail of a food truck
-      Add friends and sharing option
+* Check-in for the registered users at the food truck 
+* Page of most popular food trucks
+* Detail of a food truck
+* Add friends and sharing option
 
