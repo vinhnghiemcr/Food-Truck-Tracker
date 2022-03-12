@@ -1,16 +1,13 @@
 # Food-Truck-Tracker
 
----
 
 ## Table of Contents
 
----
 1. Overview
 2. Product Spec
 3. Wireframes
 
 ## Overview
----
 
 ### Description
 Tracks the food trucks around the user. Updated the current location of all food trucks in certain areas. It also recommends for food truck lovers or tourists the most popular ones. It also helps food truck owners update their current location and advertise themselves with their best food. 
@@ -81,6 +78,10 @@ Optional:
 * Favorite -> Jumps to favorites screen consists of favorite food trucks.
 * Cart -> Food order information is displayed on a screen
 
+## Wireframes
+
+![](https://github.com/vinhnghiemcr/Food-Truck-Tracker/blob/main/wireframe.drawio%20(3).png?raw=true)
+
 ## Schema 
 ### Models
 #### Post
@@ -116,9 +117,7 @@ Optional:
    | createdAt     | DateTime | date when comment is created (default field) |
    | updatedAt     | DateTime | date when comment is last updated (default field) |
 
-## Wireframes
 
-![](https://github.com/vinhnghiemcr/Food-Truck-Tracker/blob/main/wireframe.drawio%20(2).png?raw=true)
 
 
 
