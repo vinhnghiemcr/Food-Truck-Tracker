@@ -64,6 +64,41 @@ Optional Nice-to-have Stories
     * Access to settings like notifications, logging out
 ### 3. Navigation
 
+## Schema 
+### Models
+#### Post
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user post (default field)    |
+   | author        | Pointer to User| image author |
+   | image         | File     | image that user posts |
+   | description       | String   | information about food truck service |
+   | reviewsCount | Number   | number of reviews recieived from users |
+   | likesCount    | Number   | number of likes for the post |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
+   | reviews | Array of Reviews  | reviews received from other users |
+#### User
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user (default field) |
+   | email        | String | user's email |
+   | username        | String | user's username |
+   | bio        | String | user's profile bio |
+   | profilePic         | File     | image for user's profile picture |
+   | password       | String   | user's password |
+   | createdAt     | DateTime | date when user is created (default field) |
+   | updatedAt     | DateTime | date when user is last updated (default field) |
+#### Review
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the comment (default field) |
+   | author        | Pointer to User| comment author |
+   | post        | Pointer to Post| the post that the comment is on |
+   | text       | String   | comment text |
+   | createdAt     | DateTime | date when comment is created (default field) |
+   | updatedAt     | DateTime | date when comment is last updated (default field) |
+
 ## Wireframes
 
 ![](https://github.com/vinhnghiemcr/Food-Truck-Tracker/blob/main/wireframe.drawio%20(2).png?raw=true)
