@@ -44,7 +44,24 @@ Optional Nice-to-have Stories
   * Add friends and sharing option
 
 ### 2. Screen Archetypes
-
+* Login 
+* Register - User signs up or logs into their account
+   * Upon Download/Reopening of the application, the user is prompted to log in to gain access to their profile information to be properly matched with another person. 
+   * User need to create a role when registering
+* Food truck list
+    * Show list of food trucks that user can browse, see details and save as their favorites
+    * Can be sorted in different ways (nearest, high rated, etc)
+* Detail screen
+    * Show details about selected food truck service like name, photos, contact information, locations with map data, reviews.
+    * User can upload photos, give reviews by stars or comments.
+    * User can share information with friends in contacts or social networks
+* Map screen
+    * Show trucks GPS location on map.
+    * Can display selected food truck or all user’s favorite ones
+* Favorites
+    * Show list of user’s favorite food truck
+* Settings
+    * Access to settings like notifications, logging out
 ### 3. Navigation
 
 ## Wireframes
