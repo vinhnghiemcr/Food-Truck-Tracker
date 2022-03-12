@@ -74,7 +74,7 @@ Optional Nice-to-have Stories
    | image         | File     | image that user posts |
    | description       | String   | information about food truck service |
    | reviewsCount | Number   | number of reviews recieived from users |
-   | likesCount    | Number   | number of likes for the post |
+   | starReviewsCount    | Number   | number of reviews in stars received from users |
    | createdAt     | DateTime | date when post is created (default field) |
    | updatedAt     | DateTime | date when post is last updated (default field) |
    | reviews | Array of Reviews  | reviews received from other users |
