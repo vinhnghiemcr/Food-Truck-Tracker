@@ -62,7 +62,24 @@ Optional Nice-to-have Stories
     * Show list of user’s favorite food truck
 * Settings
     * Access to settings like notifications, logging out
+    
 ### 3. Navigation
+**Tab Navigation** (Tab to Screen)
+* Home
+* Favorite
+* Explore
+* Profile
+
+Optional:
+* Cart
+
+**Flow Navigation** (Screen to Screen)
+* Forced Log-in -> Account creation if no log in is available
+* Home -> Default screen after successful login.  It comprises of a recyclerview of food truck lists.
+* Profile -> Jumps to account details screen
+* Explore -> Jumps to map screen consists of map showing near by food trucks 
+* Favorite -> Jumps to favorites screen consists of favorite food trucks.
+* Cart -> Food order information is displayed on a screen
 
 ## Schema 
 ### Models
