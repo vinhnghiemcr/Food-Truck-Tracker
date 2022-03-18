@@ -118,29 +118,18 @@ Optional:
    | updatedAt     | DateTime | date when comment is last updated (default field) |
 
 ### Networking
-- List of network requests by screen
- *Home Feed Screen
- *(Read/GET) Query all posts where user is author
- *let query = PFQuery(className:"Post")
- *query.whereKey("author", equalTo: currentUser)
- *query.order(byDescending: "createdAt")
- *query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-      if let error = error {
-         print(error.localizedDescription)
-      } else if let posts = posts {
-         print("Successfully retrieved \(posts.count) posts.")
-     // TODO: Do something with posts...
-      }
-   }
- *(Create/POST) Create a new like on a post
- *(Delete) Delete existing like
- *(Create/POST) Create a new comment on a post
- *(Delete) Delete existing comment
- *Create Post Screen
-  (Create/POST) Create a new post object
- *Profile Screen
- *(Read/GET) Query logged in user object
- *(Update/PUT) Update user profile image
+#### List of network requests by screen
+-  Home Feed Screen
+    * (Read/GET) Query all posts where user is author  
+    * (Create/POST) Create a new like on a post
+    * (Delete) Delete existing like
+    * (Create/POST) Create a new comment on a post
+    * (Delete) Delete existing comment
+- Create Post Screen
+    * (Create/POST) Create a new post object
+- Profile Screen
+    * (Read/GET) Query logged in user object
+    * (Update/PUT) Update user profile image
 
 
 
