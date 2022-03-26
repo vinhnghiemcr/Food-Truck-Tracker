@@ -82,6 +82,12 @@ Optional:
 
 ![](https://github.com/vinhnghiemcr/Food-Truck-Tracker/blob/main/wireframe.drawio%20(3).png?raw=true)
 
+### [BONUS] Digital Wireframes & Mockups
+<img src="wireframe.jpg" height=200>
+
+### [BONUS] Interactive Prototype
+<img src="walkthrough.gif" width=200>
+
 ## Schema 
 ### Models
 #### Post
