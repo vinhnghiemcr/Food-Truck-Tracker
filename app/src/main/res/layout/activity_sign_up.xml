@@ -11,75 +11,63 @@
         android:id="@+id/etEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginEnd="60dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="302dp"
+        android:layout_marginTop="60dp"
         android:background="#FFFFFF"
         android:ems="10"
+        android:hint="Email id"
         android:inputType="textEmailAddress"
         android:padding="10dp"
-        tools:ignore="TouchTargetSizeCheck"
-        tools:text=" Email Id" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/etEmail"
         android:layout_centerHorizontal="true"
-        android:layout_marginEnd="63dp"
-        android:layout_marginStart="57dp"
         android:layout_marginTop="28dp"
         android:background="#FFFFFF"
         android:ems="10"
+        android:hint="Password"
         android:inputType="textPassword"
         android:padding="10dp"
-        tools:ignore="TouchTargetSizeCheck"
-        tools:text="Password" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/etConfirmPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/etPassword"
         android:layout_centerHorizontal="true"
-        android:layout_marginEnd="65dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         android:background="#FFFFFF"
         android:ems="10"
+        android:hint="Confirm Password"
         android:inputType="textPassword"
         android:padding="10dp"
-        tools:ignore="TouchTargetSizeCheck"
-        tools:text="Password" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/btnSignUpAsUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="157dp"
+        android:layout_below="@+id/etConfirmPassword"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
         android:text="Sign Up As User" />
 
     <Button
         android:id="@+id/btnSignUpAsOwner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="156dp"
-        android:layout_marginEnd="12dp"
+        android:layout_below="@+id/etConfirmPassword"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
         android:layout_toEndOf="@+id/btnSignUpAsUser"
         android:text="Sign Up As Owner" />
 
@@ -87,12 +75,12 @@
         android:id="@+id/tvAlreadyHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="99dp"
+        android:layout_below="@+id/btnSignUpAsOwner"
         android:layout_marginEnd="34dp"
+        android:layout_marginTop="20dp"
         android:textColor="#FFFFFF"
-        tools:text="Already have account?" />
+        android:text="Already have account?" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -101,7 +89,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="68dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/foodtruck" />
 </RelativeLayout>
