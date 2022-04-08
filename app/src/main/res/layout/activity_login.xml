@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/etEmailILA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ivLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="78dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Email id"
+        android:hintTextColor="#757575"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textColorHint="#A39999"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/etPasswordLA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etEmailILA"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="33dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Password"
+        android:hintTextColor="#757575"
+        android:inputType="textPassword"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textColorHint="#A39999"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnLoginLA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="261dp"
+        android:layout_marginStart="157dp"
+        android:text="Login" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        tools:srcCompat="@tools:sample/avatars" />
+</RelativeLayout>
