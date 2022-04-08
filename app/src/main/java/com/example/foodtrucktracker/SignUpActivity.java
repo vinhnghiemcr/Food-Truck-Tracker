@@ -26,11 +26,9 @@ public class SignUpActivity extends AppCompatActivity {
 
         alreadyHaveAccount = findViewById(R.id.tvAlreadyHaveAccount);
 
-        btnSignUpAsOwner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        btnSignUpAsOwner.setOnClickListener(view -> {
 
-            }
+
         });
 
         btnSignUpAsUser.setOnClickListener(new View.OnClickListener() {
