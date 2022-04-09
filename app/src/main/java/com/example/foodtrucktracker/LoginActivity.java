@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etEmailILA;
     private EditText etPasswordLA;
     private Button btnLoginLA;
-    private Button btnSignUp;
+    private Button btnSignUpLA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,17 +36,18 @@ public class LoginActivity extends AppCompatActivity {
         etEmailILA = findViewById(R.id.etEmailILA);
         etPasswordLA = findViewById(R.id.etPasswordLA);
         btnLoginLA = findViewById(R.id.btnLoginLA);
-//        btnSignUp = findViewById(R.id.btnSignUp);
+        btnSignUpLA = findViewById(R.id.btnSignUpLA);
 
-//        btnSignUp.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.i(TAG, "onClick sign up button");
+        btnSignUpLA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG, "onClick sign up button");
 //                String username = etEmailILA.getText().toString();
 //                String password = etPasswordLA.getText().toString();
 //                signUpUser(username, password);
-//            }
-//        });
+                goSignUpActivity();
+            }
+        });
         btnLoginLA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,10 +101,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
-//    private void goMainActivity() {
-//        Intent intent = new Intent(this, MainActivity.class);
-//        startActivity(intent);
-//        finish();
-//    }
+    private void goSignUpActivity() {
+        Intent intent = new Intent(this, SignUpActivity.class);
+        startActivity(intent);
+        finish();
+    }
+    private void goMainActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }
