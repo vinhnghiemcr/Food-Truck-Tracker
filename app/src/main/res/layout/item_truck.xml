@@ -8,12 +8,13 @@
 
     <ImageView
         android:id="@+id/ivTruckImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
         app:srcCompat="@drawable/foodtruck" />
 
     <ImageView
@@ -40,10 +41,13 @@
         android:id="@+id/tvLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvTruckType"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_marginBottom="3dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/imageView3"
+        android:singleLine="true"
         android:text="2001 Clovis Road"
         android:textColor="#FFFFFF" />
 
@@ -56,6 +60,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_toEndOf="@+id/ivTruckImage"
+        android:singleLine="true"
         android:text="Mexican Food"
         android:textColor="#FFFFFF"
         android:textSize="14sp" />
@@ -64,10 +69,13 @@
         android:id="@+id/tvOpeningHours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvLocation"
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_marginBottom="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/imageView4"
+        android:singleLine="true"
         android:text="9:00am to 12:30pm"
         android:textColor="#FFFFFF" />
 
@@ -79,6 +87,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_toEndOf="@+id/ivTruckImage"
+        android:singleLine="true"
         android:text="Raider Burritos"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
@@ -88,8 +97,9 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="154dp"
+        android:layout_below="@+id/ivTruckImage"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/darker_gray" />
 </RelativeLayout>
