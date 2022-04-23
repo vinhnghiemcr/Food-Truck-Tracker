@@ -53,7 +53,6 @@ public class SignUpActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(SignUpActivity.this, "Password must match!", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
 
