@@ -64,7 +64,7 @@ public class TimelineFragment extends Fragment {
     protected void queryTrucks() {
         // Specify which class to query
         ParseQuery<Truck> query = ParseQuery.getQuery(Truck.class);
-        query.include(Truck.KEY_USER);
+//        query.include(Truck.KEY_USER);
         query.setLimit(20);
         query.addDescendingOrder(Truck.KEY_CREATED_AT);
         query.findInBackground(new FindCallback<Truck>() {
