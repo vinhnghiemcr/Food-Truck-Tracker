@@ -1,14 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#000000">
+
+        <ImageView
+            android:id="@+id/ivEditBtn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:src="@drawable/ic_edit" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="328dp"
+            android:text="Name : "
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="32dp"
+            android:text="Email : "
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="32dp"
+            android:text="Address : "
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView3"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Phone : "
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            app:cardCornerRadius="150dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:id="@+id/ivProfilePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:padding="10dp"
+                app:srcCompat="@drawable/userprofile" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignTop="@+id/textView"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/textView"
+            android:text="XYZ"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvEmailId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignStart="@+id/tvUserName"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:text="xyz@gmail.com"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvUserAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignStart="@+id/tvEmailId"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:singleLine="true"
+            android:text="3002 4th street"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_alignStart="@+id/tvUserAddress"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:singleLine="true"
+            android:text="805-878-3311"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </RelativeLayout>
 
 </FrameLayout>
