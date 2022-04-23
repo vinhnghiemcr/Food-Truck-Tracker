@@ -10,7 +10,7 @@
     <item
         android:id="@+id/action_favorites"
         android:icon="@drawable/heart"
-        android:title="Compose"
+        android:title="Favorites"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_profile"
