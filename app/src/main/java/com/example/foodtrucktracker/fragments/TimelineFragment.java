@@ -64,9 +64,9 @@ public class TimelineFragment extends Fragment {
     protected void queryTrucks() {
         // Specify which class to query
         ParseQuery<Truck> query = ParseQuery.getQuery(Truck.class);
-//        query.include(Truck.KEY_USER);
+        query.include(Truck.KEY_USER);
         query.setLimit(20);
-//        query.addDescendingOrder(Truck.KEY_CREATED_AT);
+        query.addDescendingOrder(Truck.KEY_CREATED_AT);
         query.findInBackground(new FindCallback<Truck>() {
             @Override
             public void done(List<Truck> trucks, ParseException e) {
@@ -75,7 +75,7 @@ public class TimelineFragment extends Fragment {
                     return;
                 }
                 for (Truck truck : trucks) {
-                    Log.i(TAG, "Truck " + truck.getTruckDescription() + " username = " + truck.getUser().getUsername());
+                    Log.i(TAG, "Truck " + truck.getTruckName() + " username = " + truck.getUser().getUsername());
                 }
 
                 allTrucks.addAll(trucks);

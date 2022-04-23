@@ -15,6 +15,7 @@ public class Truck extends ParseObject {
     public static final String KEY_PHONE_NUMBER = "phone_number";
     public static final String KEY_IMAGE = "image";
     public static final String KEY_USER = "user";
+    public static final String KEY_CREATED_AT = "createdAt";
 
     public String getTruckName() {return getString(KEY_TRUCK_NAME);}
 
