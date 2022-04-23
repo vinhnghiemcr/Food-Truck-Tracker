@@ -1,17 +1,24 @@
 package com.example.foodtrucktracker;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.util.Pair;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.parse.ParseFile;
+
+import org.parceler.Parcels;
 
 import java.util.List;
 
@@ -56,6 +63,7 @@ public class TrucksAdapter extends RecyclerView.Adapter<TrucksAdapter.ViewHolder
     }
 
     public class ViewHolder extends  RecyclerView.ViewHolder{
+        private RelativeLayout truckContainer;
         private TextView tvFoodTruckName;
         private TextView tvOpeningHours;
         private TextView tvTruckType;
@@ -64,7 +72,7 @@ public class TrucksAdapter extends RecyclerView.Adapter<TrucksAdapter.ViewHolder
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
+            truckContainer = itemView.findViewById(R.id.truckContainer);
             tvFoodTruckName = itemView.findViewById(R.id.tvFoodTruckName);
             tvOpeningHours = itemView.findViewById(R.id.tvOpeningHours);
             tvTruckType = itemView.findViewById(R.id.tvTruckType);
@@ -83,6 +91,22 @@ public class TrucksAdapter extends RecyclerView.Adapter<TrucksAdapter.ViewHolder
             if ( image != null) {
                 Glide.with(context).load(image.getUrl()).into(ivTruckImage);
             }
+
+            //Register click listener on the movie item row
+            truckContainer.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //Navigate to a new activity on tap
+                    Intent i = new Intent(context, FoodTruckDetailActivity.class);
+                    i.putExtra("truck", Parcels.wrap(truck));
+                    Pair<View, String> p1 = Pair.create(tvFoodTruckName, "name");
+                    Pair<View, String> p2 = Pair.create(tvOpeningHours, "openHours");
+                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) context, p1, p2);
+                    context.startActivity(i, options.toBundle());
+                }
+            });
         }
+
+
     }
 }
