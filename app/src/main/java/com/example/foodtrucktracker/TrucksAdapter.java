@@ -43,6 +43,7 @@ public class TrucksAdapter extends RecyclerView.Adapter<TrucksAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Truck truck = trucks.get(position);
         holder.bind(truck);
+
     }
 
     @Override
