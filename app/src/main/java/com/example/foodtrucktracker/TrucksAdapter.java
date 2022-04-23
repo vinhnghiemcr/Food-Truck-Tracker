@@ -10,6 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.parse.ParseFile;
+
 import java.util.List;
 
 public class TrucksAdapter extends RecyclerView.Adapter<TrucksAdapter.ViewHolder> {
@@ -73,6 +76,13 @@ public class TrucksAdapter extends RecyclerView.Adapter<TrucksAdapter.ViewHolder
 
             //bind data to view
             tvFoodTruckName.setText(truck.getTruckName());
+            tvOpeningHours.setText(truck.getOpenHours());
+            tvTruckType.setText(truck.getTruckType());
+            tvLocation.setText(truck.getTruckLocation());
+            ParseFile image = truck.getImage();
+            if ( image != null) {
+                Glide.with(context).load(image.getUrl()).into(ivTruckImage);
+            }
         }
     }
 }

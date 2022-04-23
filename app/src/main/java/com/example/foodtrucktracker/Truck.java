@@ -9,6 +9,7 @@ import com.parse.ParseUser;
 public class Truck extends ParseObject {
     public static final String KEY_TRUCK_NAME = "name";
     public static final String KEY_TRUCK_TYPE = "type";
+    public static final String KEY_TRUCK_LOCATION = "location";
     public static final String KEY_OPEN_HOURS= "open_hours";
     public static final String KEY_TRUCK_DESCRIPTION = "description";
     public static final String KEY_PHONE_NUMBER = "phone_number";
@@ -24,6 +25,10 @@ public class Truck extends ParseObject {
     public String getTruckType() {return getString(KEY_TRUCK_TYPE);}
 
     public void setTruckType(String truckType) {put(KEY_TRUCK_TYPE, truckType);}
+
+    public String getTruckLocation() {return getString(KEY_TRUCK_LOCATION);}
+
+    public void setTruckLocation(String truckLocation) {put(KEY_TRUCK_LOCATION, truckLocation);}
 
     public String getOpenHours() {return getString(KEY_OPEN_HOURS);}
 
