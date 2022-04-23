@@ -37,7 +37,7 @@
         app:srcCompat="@drawable/ic_time" />
 
     <TextView
-        android:id="@+id/tvlocation"
+        android:id="@+id/tvLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTruckType"
@@ -52,11 +52,11 @@
         android:id="@+id/tvTruckType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvFoodtruckName"
+        android:layout_below="@+id/tvFoodTruckName"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_toEndOf="@+id/ivTruckImage"
-        android:text="Mexican Restaurant"
+        android:text="Mexican Food"
         android:textColor="#FFFFFF"
         android:textSize="14sp" />
 
@@ -64,7 +64,7 @@
         android:id="@+id/tvOpeningHours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvlocation"
+        android:layout_below="@+id/tvLocation"
         android:layout_marginStart="8dp"
         android:layout_marginTop="15dp"
         android:layout_toEndOf="@+id/imageView4"
@@ -72,7 +72,7 @@
         android:textColor="#FFFFFF" />
 
     <TextView
-        android:id="@+id/tvFoodtruckName"
+        android:id="@+id/tvFoodTruckName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
