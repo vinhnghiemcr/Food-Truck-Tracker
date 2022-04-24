@@ -133,7 +133,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textview3" />
 
-<<<<<<< Updated upstream
+
         <ImageView
             android:id="@+id/ivFavoriteBtn"
             android:layout_width="32dp"
@@ -143,7 +143,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textview"
             app:srcCompat="@drawable/unlike" />
-=======
+
+
         <TextView
             android:id="@+id/tvTruckDescription"
             android:layout_width="375dp"
@@ -153,7 +154,27 @@
             app:layout_constraintBottom_toTopOf="@+id/tvOpeningHours"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvDetail" />
->>>>>>> Stashed changes
+
+        <ImageView
+            android:id="@+id/ivAddPhotos"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textview2"
+            app:layout_constraintStart_toEndOf="@+id/textview2"
+            app:layout_constraintTop_toTopOf="@+id/textview2"
+            app:srcCompat="@drawable/ic_add" />
+
+        <ImageView
+            android:id="@+id/ivAddReviews"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="28dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textview3"
+            app:layout_constraintStart_toEndOf="@+id/textview3"
+            app:layout_constraintTop_toTopOf="@+id/textview3"
+            app:srcCompat="@drawable/ic_add" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
