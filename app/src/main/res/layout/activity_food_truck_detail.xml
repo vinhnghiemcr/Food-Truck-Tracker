@@ -13,7 +13,7 @@
 
 
         <ImageView
-            android:id="@+id/ivTruck"
+            android:id="@+id/ivTruckImage"
             android:layout_width="0dp"
             android:layout_height="250dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,7 @@
             app:srcCompat="@drawable/foodtruck" />
 
         <TextView
-            android:id="@+id/tvTruckName"
+            android:id="@+id/tvFoodTruckName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -32,11 +32,11 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivTruck"
+            app:layout_constraintTop_toBottomOf="@+id/ivTruckImage"
             tools:text="Velvet Taco" />
 
         <TextView
-            android:id="@+id/tvRestaurantType"
+            android:id="@+id/tvTruckType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -45,11 +45,11 @@
             android:textColor="#C3B8B8"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTruckName"
+            app:layout_constraintTop_toBottomOf="@+id/tvFoodTruckName"
             tools:text="Taco Restaurant" />
 
         <TextView
-            android:id="@+id/textview"
+            android:id="@+id/tvDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -59,7 +59,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivTruck"
+            app:layout_constraintTop_toBottomOf="@+id/ivTruckImage"
             tools:text="Details" />
 
         <TextView
@@ -78,7 +78,7 @@
 
 
         <TextView
-            android:id="@+id/tvOpeningTime"
+            android:id="@+id/tvOpeningHours"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -87,7 +87,7 @@
             android:textColor="#C3B8B8"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTruckName"
+            app:layout_constraintTop_toBottomOf="@+id/tvTruckType"
             tools:text="9:00 am to 12:00 pm" />
 
         <com.google.android.gms.maps.MapView
@@ -97,7 +97,7 @@
             android:layout_marginTop="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvOpeningTime"
+            app:layout_constraintTop_toBottomOf="@+id/tvOpeningHours"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -133,6 +133,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textview3" />
 
+<<<<<<< Updated upstream
         <ImageView
             android:id="@+id/ivFavoriteBtn"
             android:layout_width="32dp"
@@ -142,6 +143,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textview"
             app:srcCompat="@drawable/unlike" />
+=======
+        <TextView
+            android:id="@+id/tvTruckDescription"
+            android:layout_width="375dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="16dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/tvOpeningHours"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetail" />
+>>>>>>> Stashed changes
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
