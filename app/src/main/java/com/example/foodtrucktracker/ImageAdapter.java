@@ -76,7 +76,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
         public void bind(Image image) {
 
             //bind data to view
-            tv_name.setText("George");
+            tv_name.setText("");
             ParseFile truckImage = image.getImage();
             if ( image != null) {
                 Glide.with(context).load(truckImage.getUrl()).into(ivImage);
