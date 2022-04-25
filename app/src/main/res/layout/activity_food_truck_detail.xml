@@ -147,10 +147,11 @@
 
         <TextView
             android:id="@+id/tvTruckDescription"
-            android:layout_width="375dp"
+            android:layout_width="wrap_content"
             android:layout_height="39dp"
             android:layout_marginStart="16dp"
             android:text="TextView"
+            android:onClick="followTruck"
             app:layout_constraintBottom_toTopOf="@+id/tvOpeningHours"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textview" />
