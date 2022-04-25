@@ -2,8 +2,8 @@ package com.example.foodtrucktracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.os.Bundle;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -30,11 +30,11 @@ public class FoodTruckDetailActivity extends AppCompatActivity {
     private ImageView ivFavoriteBtn;
     private Context context;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_truck_detail);
+
 
         tvFoodTruckName = findViewById(R.id.tvFoodTruckName);
         tvOpeningHours = findViewById(R.id.tvOpeningHours);
