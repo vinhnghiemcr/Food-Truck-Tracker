@@ -14,6 +14,7 @@ public class ParseApplication extends Application {
         ParseObject.registerSubclass(Review.class);
         ParseObject.registerSubclass(Dish.class);
         ParseObject.registerSubclass(Follow.class);
+        ParseObject.registerSubclass(Image.class);
 
         // set applicationId, and server server based on the values in the back4app settings.
         // any network interceptors must be added with the Configuration Builder given this syntax

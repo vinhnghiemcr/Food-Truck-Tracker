@@ -1,6 +1,8 @@
 package com.example.foodtrucktracker;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,13 +14,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
+import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import org.parceler.Parcels;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FoodTruckDetailActivity extends AppCompatActivity {
     public static final String TAG = "FoodTruckDetailActivity";
@@ -30,6 +37,14 @@ public class FoodTruckDetailActivity extends AppCompatActivity {
     private TextView tvTruckDescription;
     private ImageView ivFavoriteBtn;
     private Context context;
+
+    private RecyclerView rvPhotos;
+    private ImageAdapter imageAdapter;
+    private List<Image> allPhotos;
+    private RecyclerView rvReviews;
+//    protected ReviewAdapter ReviewAdapter;
+    protected List<Review> allReviews;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +78,35 @@ public class FoodTruckDetailActivity extends AppCompatActivity {
             }
         });
 
+        //---Display images of the truck----
+        // Lookup the swipe container view
+        rvPhotos = findViewById(R.id.rvPhotos);
+        allPhotos = new ArrayList<>();
+        //To use the Recycler view:
+        // 1. Create layout for a row in the list
+        // 2. Create the adapter
+        imageAdapter = new ImageAdapter(this, allPhotos);
+        // 3. Create the data source
+        // 4. Set the adapter on the RV
+        rvPhotos.setAdapter(imageAdapter);
+        // 5. Set the layout manager on the RV
+        rvPhotos.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        queryPhotos(truck);
+
+//        //---Display reviews of the truck---
+//        // Lookup the swipe container view
+//        rvReviews = findViewById(R.id.rvReviews);
+//        allReviews = new ArrayList<>();
+//        //To use the Recycler view:
+//        // 1. Create layout for a row in the list
+//        // 2. Create the adapter
+//        imageAdapter = new ImageAdapter(this, allPhotos);
+//        // 3. Create the data source
+//        // 4. Set the adapter on the RV
+//        rvPhotos.setAdapter(imageAdapter);
+//        // 5. Set the layout manager on the RV
+//        rvPhotos.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+//        queryPhotos(truck);
 
     }
 
@@ -83,5 +127,30 @@ public class FoodTruckDetailActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    protected void queryPhotos(Truck truck) {
+        // Specify which class to query
+        ParseQuery<Image> query = ParseQuery.getQuery(Image.class);
+        query.include(Image.KEY_USER);
+        query.include(Image.KEY_TRUCK);
+        query.whereEqualTo(Image.KEY_TRUCK, truck);
+        query.setLimit(20);
+        query.addDescendingOrder(Image.KEY_CREATED_AT);
+        query.findInBackground(new FindCallback<Image>() {
+            @Override
+            public void done(List<Image> images, ParseException e) {
+                if (e != null) {
+                    Log.e(TAG, "Issue with getting trucks", e);
+                    return;
+                }
+                for (Image image : images) {
+                    Log.i(TAG, "Truck " + image.getTruck()+ " username = " + image.getUser().getUsername());
+                }
+
+                allPhotos.addAll(images);
+                imageAdapter.notifyDataSetChanged();
+            }
+        });
     }
 }
