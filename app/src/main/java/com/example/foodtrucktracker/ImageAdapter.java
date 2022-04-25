@@ -24,11 +24,11 @@ import java.util.List;
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
 
     private Context context;
-    private List<Truck> trucks;
+    private List<Image> images;
 
-    public ImageAdapter(Context context, List<Truck> trucks) {
+    public ImageAdapter(Context context, List<Image> images) {
         this.context = context;
-        this.trucks = trucks;
+        this.images = images;
     }
 
     @NonNull
@@ -40,25 +40,25 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Truck truck = trucks.get(position);
-        holder.bind(truck);
+        Image image = images.get(position);
+        holder.bind(image);
 
     }
 
     @Override
     public int getItemCount() {
-        return trucks.size();
+        return images.size();
     }
 
     // Clean all elements of the recycler
     public void clear() {
-        trucks.clear();
+        images.clear();
         notifyDataSetChanged();
     }
 
     // Add a list of items -- change to type used
-    public void addAll(List<Truck> list) {
-        trucks.addAll(list);
+    public void addAll(List<Image> list) {
+        images.addAll(list);
         notifyDataSetChanged();
     }
 
@@ -73,13 +73,13 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
             ivImage = itemView.findViewById(R.id.iv_image);
         }
 
-        public void bind(Truck truck) {
+        public void bind(Image image) {
 
             //bind data to view
             tv_name.setText("George");
-            ParseFile image = truck.getImage();
+            ParseFile truckImage = image.getImage();
             if ( image != null) {
-                Glide.with(context).load(image.getUrl()).into(ivImage);
+                Glide.with(context).load(truckImage.getUrl()).into(ivImage);
             }
         }
 
