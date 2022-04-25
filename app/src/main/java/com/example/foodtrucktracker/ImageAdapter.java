@@ -20,6 +20,7 @@ import com.parse.ParseFile;
 
 import java.util.List;
 
+// for images
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
 
     private Context context;

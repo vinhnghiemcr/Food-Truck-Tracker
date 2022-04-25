@@ -30,6 +30,7 @@ public class TimelineFragment extends Fragment {
     protected TrucksAdapter adapter;
     protected List<Truck> allTrucks;
 
+
     public TimelineFragment() {
         // Required empty public constructor
     }
