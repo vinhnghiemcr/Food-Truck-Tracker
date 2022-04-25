@@ -93,20 +93,20 @@ public class FoodTruckDetailActivity extends AppCompatActivity {
         rvPhotos.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         queryPhotos(truck);
 
-//        //---Display reviews of the truck---
-//        // Lookup the swipe container view
-//        rvReviews = findViewById(R.id.rvReviews);
-//        allReviews = new ArrayList<>();
-//        //To use the Recycler view:
-//        // 1. Create layout for a row in the list
-//        // 2. Create the adapter
-//        imageAdapter = new ImageAdapter(this, allPhotos);
-//        // 3. Create the data source
-//        // 4. Set the adapter on the RV
-//        rvPhotos.setAdapter(imageAdapter);
-//        // 5. Set the layout manager on the RV
-//        rvPhotos.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-//        queryPhotos(truck);
+        //---Display reviews of the truck---
+        // Lookup the swipe container view
+        rvReviews = findViewById(R.id.rvReviews);
+        allReviews = new ArrayList<>();
+        //To use the Recycler view:
+        // 1. Create layout for a row in the list
+        // 2. Create the adapter
+        imageAdapter = new ImageAdapter(this, allPhotos);
+        // 3. Create the data source
+        // 4. Set the adapter on the RV
+        rvPhotos.setAdapter(imageAdapter);
+        // 5. Set the layout manager on the RV
+        rvPhotos.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        queryPhotos(truck);
 
     }
 
