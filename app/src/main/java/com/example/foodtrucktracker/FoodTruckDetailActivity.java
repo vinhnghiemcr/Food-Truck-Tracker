@@ -39,7 +39,10 @@ public class FoodTruckDetailActivity extends AppCompatActivity {
     private TextView tvTruckDescription;
     private ImageView ivFavoriteBtn;
     private ImageView ivAddPhotos;
+    private ImageView ivAddReviews;
     private Context context;
+    AlertDialog dialogAddPhotos;
+    AlertDialog dialogAddReviews;
     AlertDialog dialog;
     private RecyclerView rvPhotos;
     private ImageAdapter imageAdapter;
@@ -84,6 +87,28 @@ public class FoodTruckDetailActivity extends AppCompatActivity {
                 });
             }
         });
+
+        ivAddReviews = findViewById(R.id.ivAddReviews);
+        //opens dialog on click of add reviews
+        ivAddReviews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(FoodTruckDetailActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.dialog_add_review, null);
+                mBuilder.setView(mView);
+                dialogAddReviews = mBuilder.create();
+                dialogAddReviews.show();
+
+                ImageView ivCloseReviewDialog = mView.findViewById(R.id.ivCloseReviewDialog);
+                ivCloseReviewDialog.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialogAddReviews.dismiss();
+                    }
+                });
+            }
+        });
+
         Truck truck = Parcels.unwrap(getIntent().getParcelableExtra("truck"));
         tvFoodTruckName.setText(truck.getTruckName());
         tvOpeningHours.setText(truck.getOpenHours());
