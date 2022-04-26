@@ -2,7 +2,10 @@ package com.example.foodtrucktracker.fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,19 +13,23 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.foodtrucktracker.Follow;
+
 import com.example.foodtrucktracker.R;
 import com.example.foodtrucktracker.Truck;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
+
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class FavoritesFragment extends TimelineFragment {
     public static final String TAG = "FavoritesFragment";
+
     public FavoritesFragment() {
         // Required empty public constructor
     }
@@ -55,4 +62,7 @@ public class FavoritesFragment extends TimelineFragment {
             }
         });
     }
+
+
+   
 }

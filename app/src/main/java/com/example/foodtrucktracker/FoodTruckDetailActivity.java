@@ -74,6 +74,7 @@ public class FoodTruckDetailActivity extends AppCompatActivity {
         ivFavoriteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ivFavoriteBtn.setImageResource(R.drawable.like);
                 followTruck(v, ParseUser.getCurrentUser(), truck);
             }
         });
