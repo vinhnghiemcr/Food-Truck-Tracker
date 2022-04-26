@@ -27,12 +27,12 @@ public class Review extends ParseObject {
         put(KEY_COMMENT, comment);
     }
 
-    public String getTruckId() {
-        return getString(KEY_TRUCK);
+    public ParseObject getTruck() {
+        return getParseObject(KEY_TRUCK);
     }
 
-    public void setTruckId(String truckId) {
-        put(KEY_TRUCK, truckId);
+    public void setTruck(ParseObject truck) {
+        put(KEY_TRUCK, truck);
     }
 
     public ParseUser getUser() {
