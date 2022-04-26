@@ -21,7 +21,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <RatingBar
                 android:id="@+id/ratingBar"
@@ -36,15 +36,15 @@
             <TextView
                 android:id="@+id/tvUserReview"
                 android:layout_width="281dp"
-                android:layout_height="0dp"
-                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
                 android:maxLines="4"
-                android:text="The original link I posted is now broken (there's a good reason why posting links only is not the best way to go). You have to style the RatingBar with either ratingBarStyleSmall or a custom style inheriting from Widget.Material.RatingBar.Small (assuming you're using Material Design in your app)."
                 android:textColor="#000000"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tvUserProfileName"
-                app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+                tools:text="Review content" />
 
             <TextView
                 android:id="@+id/tvUserProfileName"
@@ -52,12 +52,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:text="George"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/cardView"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="username" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"

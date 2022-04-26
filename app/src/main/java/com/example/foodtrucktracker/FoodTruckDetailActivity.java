@@ -42,7 +42,7 @@ public class FoodTruckDetailActivity extends AppCompatActivity {
     private ImageAdapter imageAdapter;
     private List<Image> allPhotos;
     private RecyclerView rvReviews;
-//    protected ReviewAdapter ReviewAdapter;
+    protected ReviewAdapter reviewAdapter;
     protected List<Review> allReviews;
 
 
@@ -101,16 +101,40 @@ public class FoodTruckDetailActivity extends AppCompatActivity {
         //To use the Recycler view:
         // 1. Create layout for a row in the list
         // 2. Create the adapter
-        imageAdapter = new ImageAdapter(this, allPhotos);
+        reviewAdapter = new ReviewAdapter(this, allReviews);
         // 3. Create the data source
         // 4. Set the adapter on the RV
-        rvPhotos.setAdapter(imageAdapter);
+        rvReviews.setAdapter(reviewAdapter);
         // 5. Set the layout manager on the RV
-        rvPhotos.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        queryPhotos(truck);
+        rvReviews.setLayoutManager(new LinearLayoutManager(this.context));
+        queryReviews(truck);
 
     }
 
+    private void queryReviews(Truck truck) {
+        // Specify which class to query
+        ParseQuery<Review> query = ParseQuery.getQuery(Review.class);
+        query.include(Review.KEY_TRUCK);
+        query.whereEqualTo(Review.KEY_TRUCK, truck);
+        query.include(Review.KEY_USER);
+        query.setLimit(20);
+        query.addDescendingOrder(Image.KEY_CREATED_AT);
+        query.findInBackground(new FindCallback<Review>() {
+            @Override
+            public void done(List<Review> reviews, ParseException e) {
+                if (e != null) {
+                    Log.e(TAG, "Issue with getting reviews", e);
+                    return;
+                }
+                for (Review review : reviews) {
+                    Log.i(TAG, "Review " + review.getComment()+ " username = " + review.getUser().getUsername());
+                }
+
+                allReviews.addAll(reviews);
+                reviewAdapter.notifyDataSetChanged();
+            }
+        });
+    }
 
 
     protected void followTruck(View v, ParseUser user, Truck truck) {

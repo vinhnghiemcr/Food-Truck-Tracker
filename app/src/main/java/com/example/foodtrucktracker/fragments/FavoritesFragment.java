@@ -58,7 +58,6 @@ public class FavoritesFragment extends TimelineFragment {
                 }
                 adapter.clear();
                 allTrucks.addAll(favTrucks);
-                adapter.notifyDataSetChanged();
             }
         });
     }
