@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import com.bumptech.glide.Glide;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -36,8 +37,9 @@ public class FoodTruckDetailActivity extends AppCompatActivity {
     private ImageView ivTruckImage;
     private TextView tvTruckDescription;
     private ImageView ivFavoriteBtn;
+    private ImageView ivAddPhotos;
     private Context context;
-
+    AlertDialog dialog;
     private RecyclerView rvPhotos;
     private ImageAdapter imageAdapter;
     private List<Image> allPhotos;
@@ -60,7 +62,26 @@ public class FoodTruckDetailActivity extends AppCompatActivity {
         tvTruckDescription = findViewById(R.id.tvTruckDescription);
         ivFavoriteBtn = findViewById(R.id.ivFavoriteBtn);
 
+        ivAddPhotos = findViewById(R.id.ivAddPhotos);
 
+        // opens dialog on click of add photos
+        ivAddPhotos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(FoodTruckDetailActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.dialog_add_photos, null);
+                mBuilder.setView(mView);
+                dialog = mBuilder.create();
+                dialog.show();
+                ImageView closeTaskImage = mView.findViewById(R.id.closeTaskImage);
+                closeTaskImage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+            }
+        });
         Truck truck = Parcels.unwrap(getIntent().getParcelableExtra("truck"));
         tvFoodTruckName.setText(truck.getTruckName());
         tvOpeningHours.setText(truck.getOpenHours());
